@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dropdown by grid</title>
+
+    <style>
+      .wrapper {
+        display: grid;
+        grid-template-rows: 0fr;
+        overflow: hidden;
+        transition: grid-template-rows 200ms;
+      }
+
+      .wrapper.open {
+        grid-template-rows: 1fr;
+      }
+
+      .expandable {
+        min-height: 0; /* important!!!! */
+        width: 500px;
+        background-color: blue;
+      }
+    </style>
+  </head>
+
+  <body>
+    <button id="btn">toggle</button>
+
+    <div class="wrapper">
+      <div class="expandable">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti
+        magnam, asperiores a beatae maiores aut. Fuga, neque recusandae, sunt
+        repellendus dolores dicta modi, excepturi facilis reprehenderit sit quos
+        amet mollitia illum aut ducimus necessitatibus quaerat impedit quod vel
+        sint ipsam fugiat! Aperiam numquam eveniet dicta nihil esse adipisci
+        nisi culpa odit neque. In ipsa voluptates ab labore omnis eligendi
+        excepturi consectetur. Perspiciatis officiis aut vitae quam. Quos rerum
+        qui officiis reprehenderit neque a, suscipit excepturi animi iusto
+        perspiciatis autem ex quisquam doloribus ipsum fuga quia accusamus
+        soluta omnis minus nostrum dolorem cupiditate, ipsa placeat. Saepe quae
+        iste distinctio commodi fuga amet cupiditate nam nesciunt, dicta quo
+        aliquid odio facere quisquam harum veniam, aspernatur natus optio
+        suscipit eum. Nisi repellendus amet quidem provident molestiae hic
+        sapiente consequatur, modi adipisci magnam quibusdam officia deserunt
+        praesentium similique saepe ipsam rerum ducimus quia, dolore qui totam?
+        Voluptatibus officiis rerum repellat impedit facere doloribus. Iste sint
+        aliquid fugiat, suscipit nemo facilis. Id ullam harum enim ratione vel
+        sapiente obcaecati, aperiam inventore officia ad voluptates
+        necessitatibus doloremque fugit animi fuga dolorem ipsam provident minus
+        cum, cumque porro ducimus? Ad, suscipit quos fugit impedit et laudantium
+        itaque quis. Harum expedita eum quidem, quis earum necessitatibus totam.
+        Temporibus!
+      </div>
+    </div>
+
+    <script>
+      const btn = document.querySelector('#btn')
+      const wrapper = document.querySelector('.wrapper')
+
+      btn.addEventListener('click', () => {
+        wrapper.classList.toggle('open')
+      })
+    </script>
+  </body>
+</html>
